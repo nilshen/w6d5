@@ -11,20 +11,26 @@
     </label>
     <br>
 
-    <label for="sex">Sex
-        <input 
-        type="radio"
-        sex="cat[sex]"
-        value="M"
-        >
+    <label for="sex">Sex</label>
+  
+            <label>
+            <input 
+            type="radio"
+            sex="cat[sex]"
+            name="sex_button"
+            value="M"
+            >
+            Male</label>
 
-        <input 
-        type="radio"
-        sex="cat[sex]"
-        value="F"
-        >
-
-    </label>
+            <label>
+            <input 
+            type="radio"
+            sex="cat[sex]"
+            name="sex_button"
+            value="F"
+            >
+            Female
+            </label>
     <br>
 
     <label for="color">Color
@@ -48,7 +54,7 @@
 
     <label for="description">Description </label>
         <textarea name="cat[description]">
-            <%= cat.description %>
+            <%= @cat.description %>
         </textarea>
     <br>
 
