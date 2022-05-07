@@ -20,7 +20,8 @@ class CatsController < ApplicationController
         if @cat.save
             redirect_to cat_url(@cat)
         else
-            render @cat.errors.full_messages, status: unprocessable_entity
+            flash.now[:errors] = @cat.errors.full_messages
+            render :new
         end
     end
 
@@ -31,17 +32,18 @@ class CatsController < ApplicationController
 
     def update
         @cat = Cat.find(params[:id])
-        if @cat.update(cat_params)
+        if @cat.update_attributes(cat_params)
             redirect_to cat_url(@cat)
         else
-            render @cat.errors.full_messages, status: unprocessable_entity
+            flash.now[:errors] = @cat.errors.full_messages
+            render :edit
         end
     end
 
     private
 
     def cat_params
-        require(:cat).permit(:name, :color, :sex, :description, :birth_date)
+        params.require(:cat).permit(:name, :color, :sex, :description, :birth_date)
     end
 
 end
