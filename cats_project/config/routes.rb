@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'cat_rental_requests/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 #   Prefix Verb   URI Pattern     Controller#Action
@@ -11,5 +12,5 @@ Rails.application.routes.draw do
 #        PUT    /cats/:id(.:format)            cats#update
 #        DELETE /cats/:id(.:format)            cats#destroy
   resources :cats
-
+  resources :cat_rental_requests
 end
