@@ -13,13 +13,37 @@
  *= require_tree .
  *= require_self
  */
-h2{
-    color: dodgerblue;
+h1{
+    text-align:center;
+}
+th{
+    color:rgb(8, 138, 238);
+    font-size: x-large;
  }
-li {
-    color: rgb(15, 119, 205);
+h5 {
+    color: rgb(8, 138, 238);
+    font-size:mediumgit 
 }
 
-image {
-    background-color: blue;
+table{ 
+    fixed;
+    width: 80%;
+    margin: auto;
+}
+
+td {
+    text-align: center;
+}
+
+img{
+width: 100px;
+}
+
+img:hover {
+    width: 300px;
+}
+
+body {
+
+    background-color:rgb(219, 248, 247);
 }

@@ -1,29 +1,34 @@
-<h2> All The Cool Cats In The World!!! </h2>
-<ol>
+<body>
+    
+
+<h2> All The Coolest Cats In The World!!! </h2>
+<table>
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Sex</th>
+    <th>Color</th>
+    <th>Birthday</th>
+    <th>Description</th>
+    <th>Profile Picture</th>
+</tr>
+
 <% @cats.each do |cat|%>
-<li>
- <%= cat.name %> <%= cat.sex %> <%= cat.color %> <%= cat.birth_date %> <%= cat.description %>
-</li>
+
+<tr>
+ <td><h5><%= cat.id %></h5></td>
+ <td><h5><%= cat.name %></h5></td>
+ <td><h5><%= cat.sex %></h5></td>
+ <td><h5><%= cat.color %></h5> </td>
+ <td><h5><%= cat.birth_date %> </h5></td>
+ <td><h5><%= cat.description %> </h5></td>
+ <% cat_name = cat.name.split.join("_")+".png" %>
+ <td> <%= image_tag cat_name %></td>
+
+</tr>
+
 
 <% end %>
-</ol>
+</table>
 
-<%= image_tag "Alan_Ng.png" %>
-
-<%= image_tag "Alisher_Podavonov.png" %>
-
-<%= image_tag "David_Zheng.png" %>
-
-<%= image_tag "Duncan_Murchison.png" %>
-
-<%= image_tag "Eric_Balfour.jpeg" %>
-
-<%= image_tag "Gabriel_Groenendaal.jpeg" %>
-
-<%= image_tag "Karen_Polanco.png" %>
-
-<%= image_tag "Leo_Chung.png" %>
-
-<%= image_tag "Madeline_Pla.png" %>
-
-<%= image_tag "Vivian_Chen.jpeg" %>
+</body>
